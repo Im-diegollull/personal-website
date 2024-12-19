@@ -1,26 +1,45 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="bg-white text-gray-800">
+    <Navbar />
+    <!-- Secciones -->
+    <main class="pt-16">
+      <!-- About Section -->
+      <AboutMe />
+
+      <!-- Skills Section -->
+      <MySkills />
+
+      <!-- Experience Section -->
+      <section id="experience" class="h-screen bg-white flex items-center justify-center">
+        <div class="text-center px-4">
+          <h2 class="text-4xl font-bold text-primary mb-4">Experience</h2>
+          <p class="text-gray-700">No hay experiencia profesional aún, ¡pero estoy aprendiendo cada día!</p>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <ContactMe />
+    </main>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Navbar from './components/NavBar.vue';
+import AboutMe from './components/AboutMe.vue';
+import MySkills from './components/MySkills.vue';
+import ContactMe from './components/ContactMe.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    Navbar,
+    AboutMe,
+    MySkills,
+    ContactMe,
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+/* Estilos globales adicionales si son necesarios */
 </style>
